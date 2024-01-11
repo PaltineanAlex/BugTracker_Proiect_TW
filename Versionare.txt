@@ -1,0 +1,75 @@
+v0.1
+--Creare rute, api
+--Creare pagina Login
+
+
+v0.2
+--Creare autentificare cu sesiune prin JwtToken
+--Adaugare ruta si api pentru a obtine datele unui utilizator.
+--Adaugare pagina de dashboard si sidebar
+--Adaugare dotenv(.env)
+
+v0.3
+--Adaugare header
+--Adaugare rute pentru obtinerea proiectelor si bugurilor
+--Adaugare functionalitate de a plasa proiectele in sidebar(ProjectContext hook)
+--Adaugare functionalitate de a apasa pe un proiect si a afisa bugurile pe dashboard
+--Adaugare toast-uri.
+
+v0.4
+--Adaugare efect hover pentru sidebar
+--Adaugare BugModal(Pagina modala pentru adaugarea unui bug, cu posibilitate de utilizare in viitor si pentru editarea unui bug)
+--Adaugare card pentru proiectul selectat cu informatii si butoane
+--Adaugare buton de adaugare bug functional pentru proiectul selectat
+v0.5
+--Rescriere cod de incarcare proiecte si afisare, mutand pe ruta.
+--Adaugare ruta project-list pentru afisarea proiectelor existente si adaugarea unor noi proiecte.
+--Schimbat design sidebar
+--Adaugate campuri noi necesare in baza de date pentru Proiecte si modificate api-urile.
+--Schimbata componenta BugModal sa contina noile campuri.
+--Schimbata componenta de Proiect sa contina noile informatii.
+--Schimbat design header
+--Adaugata componenta generala DeleteConfirmationModal ce poate fi folosita pe orice api de delete cu id.
+v0.6
+--Adaugata ruta /bugs/:id
+--Adaugata componenta BugDetails ce faciliteaza afisarea informatiilor despre un bug pe pagina separata
+--Adaugata functionalitatea butonului Assign to me(pe pagina unui bug)
+--TODO: --Adaugare comentarii pentru un anumit bug ce vor fi afisate pe pagina bugului
+	--Adaugare buton de preluare bug ce va fi asociat unui TESTER
+	--Adaugat buton de editare bug pentru TESTER
+
+v0.7
+--Adaugata functionalitate de mark as fixed pentru un bug preluat de cineva.(Api, modal MarkAsFixed si functii aferente in BugDetails)
+--Adaugata tabela ProjectMembers
+--Modificata tabela de Buguri ca sa contina si link ul catre rezolvare.
+TODO:
+DE ADAUGAT FETCH PROIECTE PE SIDEBAR DUPA ADAUGAREA UNUI NOU PROIECT(practic actualizarea proiectelor pe sidebar cand se creaza unul nou, fara sa trebuiasca reload la sidebar gen)
+DE ADAUGAT PERMISIUNI, VERIFICARE PERMISIUNI SI STARE LOGARE PE RUTE(cele cu tester si membru proiect si ce mai zicea in word)
+DE ADAUGAT IN BD PENTRU USER PROIECTELE DIN CARE FACE PARTE UN USER(UN ARRAY JSON CU ID-URILE PROIECTELOR){Sau alta metoda de gestiune a acestora conform cerintelor primite}
+DE ADAUGAT IN BD PERMISIUNI PENTRU USERI.(coloana exista, trebuiesc doar un sistem de adaugare si gestionare)
+DE ADAUGAT SCROLL PROGRESIV PENTRU ELEMENTELE INCARCATE DIN BD(PENTRU A INCARCA CAT MAI PUTINE PE UN SINGLE LOAD LA PAGINA)(optional)
+
+v0.8
+---Fetch Proiecte Sidebar
+---Permisiuni si verificari pentru tip de user si rute
+---Modificari in BD pentru a face verificarile
+TODO:
+DE VERIFICAT EROARE IN CARE DATELE NU SUNT SALVATE PERMANENT IN BD(DOAR PENTRU Bugs SI Projects)
+-------------------
+Funcționalități (minime)
+
+Ca student trebuie să pot sa ma conectez la aplicație cu un cont bazat pe o adresă de email.(done doar ca e pe username ci nu pe email, se schimba usor)
+
+Ca student membru în echipa unui proiect (MP) pot să înregistrez un proiect software pentru a fi monitorizat prin aplicație, specificând repository-ul proiectului și echipa de proiect.(Aici nu avem sistem de echipe dar poate inregistra oricine un proiect(momentan), se poate modela pe sistemele actuale)
+
+Ca student care nu face parte dintr-un proiect înregistrat pot să mă adaug ca tester (TST) la proiect.(nu avem acest sistem)
+
+Ca TST pot înregistra un bug în aplicație. Bug-ul conține o severitate, o prioritate de rezolvare, o descriere și un link la commit-ul la care se referă.(Avem optiunea de adaugare buguri, de preluat bug daca nu este preluat, trebuie facuta editarea acestuia si permisiunile).
+
+Ca MP pot vedea bug-urile înregistrate pentru proiectele din care fac parte.(Exista sistemul de proiecte si de incarcat buguri, aici tine tot de permisiuni de facut)
+
+Ca MP îmi pot aloca rezolvarea unui bug. Un singur MP poate să aibă alocată rezolvarea unui bug la un moment dat.(Functionalitatea de a imi aloca rezolvarea unui bug exista)
+
+Ca MP după rezolvarea unui bug pot adăuga un status al rezolvării cu un link la commit-ul prin care s-a rezolvat.(se poate face usor folosind modalul de adaugat buguri, trebuie doar editat sa ii fie atribuite informatiile si la salvare sa faca ce trebuie, e easy)
+Aplicația are și un sistem de permisiuni. Un MP poate adăuga și modifica un proiect, poate actualiza status-ul unui bug. Un TST poate adăuga un bug.(trebuie facut, tine de tot ce e mai sus(nu stiu de ce nu a fost pusa prima cerinta de sus, lol))
+

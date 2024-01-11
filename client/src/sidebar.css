@@ -1,0 +1,60 @@
+.hover-effect:hover {
+   /* background-color: #555; /* Culoare închisă la hover */
+    /*transition: background-color 0.3s ease; /* Tranzitie pentru efectul de hover */
+    color: #9e9e9e;
+    transition: color 0.3s ease;
+  }
+
+  .sidebar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.discordapp.com/attachments/1142386657681756160/1189576861878079571/image.png?ex=659eaac9&is=658c35c9&hm=2eb605a3c42ceb43e952fffafff630ff2c1e101203c9c8c3cdf067a22d33fc40&');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+  }
+
+  .dropdown-toggle:hover {
+    color: #9e9e9e;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #9e9e9e;
+    transition: color 0.3s ease;
+  }
+
+.my-custom-dropdown .dropdown-toggle:hover,
+.my-custom-dropdown .dropdown-menu a:hover {
+  color: #9e9e9e !important;
+  transition: color 0.3s ease;
+}
+
+.my-custom-dropdown .dropdown-item:hover {
+  color: #9e9e9e !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Adaugă aceste stiluri la sfârșitul fișierului CSS sau într-un fișier separat */
+.status-indicator {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 5px; /* Adaugă un spațiu mic între indicator și text */
+}
+
+.status-indicator.rezolvat {
+  background-color: #4CAF50; /* Verde pentru rezolvat */
+  color: white;
+}
+
+.status-indicator.preluat {
+  background-color: #FFA500; /* Portocaliu pentru preluat */
+  color: white;
+}
+
+.status-indicator.nerezolvat {
+  background-color: #FF0000; /* Roșu pentru nerezolvat */
+  color: white;
+}
